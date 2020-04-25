@@ -1,4 +1,4 @@
-# JS-basic-game-engine
+# JS-basic-game-engine Timer:
  basic engine for JC games and apps
 
 A timer class
