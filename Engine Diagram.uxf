@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>270</x>
-      <y>230</y>
+      <x>280</x>
+      <y>320</y>
       <w>210</w>
       <h>70</h>
     </coordinates>
@@ -18,8 +18,8 @@ and configures all parts</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>450</x>
-      <y>10</y>
+      <x>480</x>
+      <y>80</y>
       <w>220</w>
       <h>90</h>
     </coordinates>
@@ -33,12 +33,36 @@ be defined at main</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>400</x>
-      <y>90</y>
-      <w>160</w>
-      <h>160</h>
+      <x>410</x>
+      <y>160</y>
+      <w>180</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>140.0;10.0;10.0;140.0</additional_attributes>
+    <additional_attributes>160.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>100</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Basic Controllers
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>190</x>
+      <y>160</y>
+      <w>150</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;130.0;160.0</additional_attributes>
   </element>
 </diagram>
