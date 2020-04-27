@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>280</x>
+      <x>210</x>
       <y>320</y>
       <w>210</w>
       <h>70</h>
@@ -18,46 +18,54 @@ and configures all parts</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>480</x>
+      <x>370</x>
       <y>80</y>
-      <w>220</w>
-      <h>90</h>
+      <w>320</w>
+      <h>80</h>
     </coordinates>
-    <panel_attributes>Timer
+    <panel_attributes>*Timer*
 --
-For the game loop
-this.update() -&gt; needs to 
-be defined at main</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>410</x>
-      <y>160</y>
-      <w>180</w>
-      <h>180</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>160.0;10.0;10.0;160.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>100</x>
-      <y>100</y>
-      <w>210</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>Basic Controllers
---
+create instance
+instance.update() = : define update inside the loop
+instance.start(): starts the loop
+
+
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>190</x>
+      <x>340</x>
+      <y>150</y>
+      <w>160</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>140.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>50</y>
+      <w>320</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>*Basic Controllers*
+(keyboard)
+--
+create instance
+instance.listenTo(window) : where to listen
+instance.addKeyMapping() : connect key 
+with func
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>120</x>
       <y>160</y>
       <w>150</w>
       <h>180</h>
