@@ -54,3 +54,13 @@ class KeyBoardState {
 
 
 }
+
+/*
+events.code :
+'Spase', 'ArrowUp', 'ArrowLeft', 'ArrowRight', 'ArrowDown'
+'KeyA', 'KeyB' ... 'keyZ'
+'Digit1', 'Digit2' .. 'Digit10'
+'ShiftLeft', 'ShiftRight'
+'controlLeft', 'ControlRight'
+'Escape'
+*/
