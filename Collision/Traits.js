@@ -27,7 +27,7 @@ class Velocity extends Trait{
 class Gravity extends Trait {
     constructor(){
         super('Gravity')
-        this.G = 4000;
+        this.G = 600;
     }
 
     update(entity,deltaTime){
@@ -44,7 +44,7 @@ class Jump extends Trait {
         this.velocity = 200;
 
         //h megisth diarkeia tou phdhmatos
-        this.duration = 0.5;
+        this.duration = 0.3;
 
         //o sinolikos xronos pou einai pathmeno to Jump
         this.engageTime=0;

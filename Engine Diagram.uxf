@@ -168,13 +168,14 @@ at entities class
       <x>238</x>
       <y>385</y>
       <w>182</w>
-      <h>63</h>
+      <h>70</h>
     </coordinates>
     <panel_attributes>*Level*
 --
 create instance
 inctance.update:connect with timer upd
-inctance.draw:connect with timer draw</panel_attributes>
+inctance.draw:connect with timer draw
+instance.addEntities</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
