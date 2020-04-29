@@ -39,10 +39,10 @@ instance.start(): starts the loop
       <x>525</x>
       <y>287</y>
       <w>21</w>
-      <h>119</h>
+      <h>112</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -188,5 +188,27 @@ instance.addEntities</panel_attributes>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>469</y>
+      <w>70</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>*Grid*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>301</x>
+      <y>448</y>
+      <w>21</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
   </element>
 </diagram>

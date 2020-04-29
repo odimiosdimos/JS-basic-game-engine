@@ -10,6 +10,8 @@ class Timer{
             accumulatedTime += (time-lastTime)/1000
             lastTime=time;
         
+            //is u change tab it wont load to many actions
+            if (accumulatedTime > 10*deltaTime){ accumulatedTime = 10*deltaTime}
             while (accumulatedTime > deltaTime){
                 this.update(deltaTime)
                 accumulatedTime-=deltaTime

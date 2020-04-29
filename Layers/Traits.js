@@ -27,7 +27,7 @@ class Velocity extends Trait{
 class Gravity extends Trait {
     constructor(){
         super('Gravity')
-        this.G = 600;
+        this.G = 100;
     }
 
     update(entity,deltaTime){

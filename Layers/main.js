@@ -1,29 +1,28 @@
 //For Test and exibition reasons
 
+document.addEventListener('visibilitychange', function() {
+    document.hidden; // whether or not the tab is visible
+});
+
 canvas = document.getElementById('plaisio')
 canvas.width=640
 canvas.height=480
 
 context = canvas.getContext('2d')
 
-context.fillStyle='blue'
-context.fillRect(0,0,canvas.width,canvas.height)
 
 
 const timer = new Timer(1/30)
 
-const mario = new Mario(0,0);
-
+const mario = new Mario(0,0)
 const level = new Level();
 level.addEntity(mario);
 level.addPlegma(plegma1_0);
-console.log(level.grid.plegma)
+
 
 //controllers with mario inside
 
 timer.update = function update(deltaTime){
-    context.fillStyle='blue'
-    context.fillRect(0,0,canvas.width,canvas.height)
     level.update(deltaTime)
     level.draw(context)
 }
