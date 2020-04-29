@@ -1,18 +1,23 @@
 class Level {
     constructor() {
         this.entities = new Set();
-        this.tiles = [];
         this.grid = new Grid();
 
         this.tileSize = 32;
 
         this.backGroundBuff = null;
+
+        this.tileCollider = new TileCollider(this.grid)
     }
 
     update(deltaTime){
         this.entities.forEach( entity => {
             entity.update(deltaTime)
+
+            this.tileCollider.test(entity)
         })
+
+
     }
 
     draw(context){
