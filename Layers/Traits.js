@@ -18,6 +18,7 @@ class Velocity extends Trait{
     }
 
     update(entity,deltaTime){
+        if (entity.vel.y > 500) entity.vel.y = 500;
         entity.pos.x += entity.vel.x*deltaTime;
         entity.pos.y += entity.vel.y*deltaTime;
     }
@@ -27,11 +28,11 @@ class Velocity extends Trait{
 class Gravity extends Trait {
     constructor(){
         super('Gravity')
-        this.G = 100;
+        this.G = 500;
     }
 
     update(entity,deltaTime){
-        entity.vel.y+=this.G*deltaTime
+        entity.vel.y+=this.G**entity.M*deltaTime
     }
 
 }
@@ -52,7 +53,6 @@ class Jump extends Trait {
 
     start(){
         this.engageTime=this.duration;
-        console.log('Jump')
     }
 
     cancel(){

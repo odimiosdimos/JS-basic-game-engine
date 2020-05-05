@@ -8,10 +8,11 @@ class Mario extends Entity {
 
     constructor(x,y){
         super(MARIO_W,MARIO_H,x,y)
-        this.NAME = 'Mario';
-        this.addTrait(new Velocity());
+        this.M = 1;//maza, multiplied be g
+        this.NAME = 'Mario';  
         this.addTrait(new Gravity());
-        this.addTrait(new Jump())
+        this.addTrait(new Jump());
+        this.addTrait(new Velocity());
     }
 
     draw(context){

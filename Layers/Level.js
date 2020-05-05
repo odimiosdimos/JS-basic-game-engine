@@ -8,6 +8,34 @@ class Level {
         this.backGroundBuff = null;
 
         this.tileCollider = new TileCollider(this.grid)
+
+        this.drawCollision = this.createCollisionLayer(); //that's pretty cool man:P
+    }
+
+    createCollisionLayer(){
+        const resolvedTiles = [];
+
+        const getByIndexOriginal = this.tileCollider.tileResolver.getByIndex;
+        
+        this.tileCollider.tileResolver.getByIndex = function getByIndexFake(x,y){
+            resolvedTiles.push([x,y])
+            return getByIndexOriginal.call(this,x,y);
+            //it seems to work but who knows why!
+        }
+
+        return function drawCollision(context){
+            resolvedTiles.forEach( ([x,y]) => {
+
+                context.beginPath();
+                context.lineWidth = "2";
+                context.strokeStyle = "red";
+                context.rect(x*this.tileSize,y*this.tileSize,
+                    this.tileSize,this.tileSize)
+                context.stroke();
+                resolvedTiles.length = 0;
+            } )
+        }
+
     }
 
     update(deltaTime){
@@ -22,17 +50,15 @@ class Level {
 
     draw(context){
         //draw ground and bagkground
-
-
         context.drawImage(this.backGroundBuff,0,0)
         
-
         //draw entites
         this.entities.forEach( entity => {
             entity.draw(context)
         })
-    }
 
+        this.drawCollision(context);
+    }
     addEntities(entities){
         entities.forEach( entity =>{
             this.entities.add(entity)
@@ -49,9 +75,11 @@ class Level {
     }
 
     setUpBackground(){
+        //it's added when the grid is added to level
+
         const buffer = document.createElement('canvas')
         //there shouldnt be different defines of width 
-        buffer.width=640
+        buffer.width=800
         buffer.height=480
         const buffContext = buffer.getContext('2d');
         
