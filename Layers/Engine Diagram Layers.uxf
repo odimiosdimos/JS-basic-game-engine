@@ -52,7 +52,7 @@ instance.start(): starts the loop
       <w>256</w>
       <h>96</h>
     </coordinates>
-    <panel_attributes>*Basic Controllers*
+    <panel_attributes>*Set Up Controllers*
 (keyboard)
 --
 create instance
