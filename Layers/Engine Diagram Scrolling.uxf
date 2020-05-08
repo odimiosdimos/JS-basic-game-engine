@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>710</x>
+      <y>300</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*main*
+--
+runs the program
+and configures all parts</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>710</x>
+      <y>90</y>
+      <w>320</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>*Timer*
+--
+create instance
+instance.update() = : define update inside the loop
+instance.start(): starts the loop
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>810</x>
+      <y>160</y>
+      <w>30</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>0</y>
+      <w>320</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>*Basic Controllers*
+(keyboard)
+--
+create instance
+instance.listenTo(window) : where to listen
+instance.addKeyMapping() : connect key 
+with func
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>550</x>
+      <y>110</y>
+      <w>220</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;200.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>940</x>
+      <y>320</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Math
+--
+(vector)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>910</x>
+      <y>320</y>
+      <w>50</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;30.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>290</y>
+      <w>270</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>*Entity(ies)*
+--
+create instances
+inctance.update(): connect with level upd
+inctance.draw(): connect with Level draw</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>320</y>
+      <w>60</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;40.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>230</x>
+      <y>110</y>
+      <w>240</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>AddKeyMapping
+has entities references</panel_attributes>
+    <additional_attributes>150.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>400</y>
+      <w>150</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>*Traits*
+--
+Velocity,Jump,Gravity ..
+this.addTrait(trait)
+at entities class
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>190</x>
+      <y>370</y>
+      <w>30</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>300</y>
+      <w>260</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>*Level*
+--
+create instance
+inctance.update:connect with timer upd
+inctance.draw:connect with timer draw
+instance.addEntities</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>650</x>
+      <y>320</y>
+      <w>80</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>430</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>*Grid*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>390</y>
+      <w>30</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>550</x>
+      <y>430</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>*Camera*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>580</x>
+      <y>390</y>
+      <w>30</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+</diagram>
