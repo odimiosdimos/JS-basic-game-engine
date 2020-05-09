@@ -24,23 +24,11 @@ class Level {
 
 
     }
-
-    createEntitiesLayer(){
-        const buffer = document.createElement('canvas');
-        buffer.width=64;
-        buffer.height=64;
-
-        const buffCtx = buffer.getContext('2d');
-
-        this.entitySprites = buffer;
-
-    }
-
     
 
-    draw(context){
+    draw(context,camera){
         //draw ground and bagkground
-        this.comp.draw(context)
+        this.comp.draw(context,camera)
 
     }
     addEntities(entities){

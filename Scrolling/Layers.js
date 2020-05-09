@@ -1,8 +1,7 @@
 //prob level map
 function createBackroundLayer(backgroundMap){
-    console.log(backgroundMap)
     const buffer = document.createElement('canvas');
-    buffer.width = 800;
+    buffer.width = 2040;
     buffer.height = 480;
     const buffContext = buffer.getContext('2d')
 
@@ -21,17 +20,28 @@ function createBackroundLayer(backgroundMap){
         })
     } )
 
-    return function drawBackgroundLayer(context){
-        context.drawImage(buffer,0,0)
+    return function drawBackgroundLayer(context,camera){
+        context.drawImage(buffer,-camera.pos.x,-camera.pos.y)
     }
 
 }
 
 function createEntitiesLayer(entities){
-    return function drawEntitiesLayer(){
+    const Entitiesbuffer = document.createElement('canvas');
+    Entitiesbuffer.width = 2040;
+    Entitiesbuffer.height = 480;
+    const EntitiesbuffContext = Entitiesbuffer.getContext('2d')
+
+    return function drawEntitiesLayer(context,camera){
+        EntitiesbuffContext.clearRect(0,0,Entitiesbuffer.width, Entitiesbuffer.height);
 
             entities.forEach( entity => {
-            entity.draw(context)
+                entity.draw(EntitiesbuffContext)
             })
+
+            context.drawImage(Entitiesbuffer,-camera.pos.x, -camera.pos.y)
+
         }
+
+
 }

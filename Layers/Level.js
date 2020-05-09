@@ -38,9 +38,9 @@ class Level {
 
     
 
-    draw(context){
+    draw(context,camera){
         //draw ground and bagkground
-        this.comp.draw(context)
+        this.comp.draw(context,camera)
 
     }
     addEntities(entities){
