@@ -21,7 +21,7 @@ class Velocity extends Trait{
         //max velocity should be less than tuileSize per frame
         if (entity.vel.y > 500) entity.vel.y = 500;
 
-        entity.pos.x += entity.vel.x*deltaTime;
+        entity.pos.x += entity.VEL_X*entity.dir*deltaTime;
         entity.pos.y += entity.vel.y*deltaTime;
     }
 

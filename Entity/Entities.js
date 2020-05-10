@@ -7,6 +7,8 @@ class Mario extends Entity {
         this.addTrait(new Velocity());
         this.addTrait(new Gravity());
         this.addTrait(new Jump())
+        //should it have acceleration instead of default speed?
+        //should it have "sliperry" after stop /god i hated this as a kid
     }
 
     draw(context){

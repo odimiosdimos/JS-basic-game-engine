@@ -11,11 +11,12 @@ class Mario extends Entity {
         this.M = 1;//maza, multiplied be g
         this.NAME = 'Mario';  
         this.size.set(32,92)
+        this.VEL_X = 300;
 
         //this seira is important! 
         this.addTrait(new Gravity());
         this.addTrait(new Jump());
-        this.addTrait(new Velocity());
+        this.addTrait(new Velocity()); //no need for dir i think
     }
 
     draw(context){

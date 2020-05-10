@@ -9,7 +9,7 @@ function createBackroundLayer(backgroundMap,camera){
     function redrawFromCamera(camera){
 
         let startIndex= new Vec2( 
-            Math.floor(camera.pos.x/32) ,
+            Math.floor(camera.pos.x / 32) ,
             Math.floor(camera.pos.y / 32) ); 
         let endIndex=  new Vec2( 
            Math.ceil( (camera.pos.x+camera.size.x) / 32 ) ,
@@ -18,11 +18,8 @@ function createBackroundLayer(backgroundMap,camera){
         //if (startIndex < 0) startIndex=0;
         //if (startIndex > backgroundMap.getWidth() )
 
-        console.log("from : " + startIndex.x+", "+startIndex.y+" to : "+
-        endIndex.x+", "+ endIndex.y)
-
-        for (let row=startIndex.y; row < endIndex.y;row++){
-            for (let col=startIndex.x; col < endIndex.x;col++){
+        for (let row=startIndex.y; row < endIndex.y+1;row++){
+            for (let col=startIndex.x; col < endIndex.x+1;col++){
                 tile = backgroundMap.get(col,row)
                 if (tile) {
                     buffContext.fillStyle='brown'
@@ -33,6 +30,12 @@ function createBackroundLayer(backgroundMap,camera){
                     buffContext.fillStyle='blue'
                     buffContext.fillRect((col-startIndex.x)*32,(row-startIndex.y)*32,//starting pos
                         32,32) //width, height
+
+                         buffContext.strokeStyle = "purple";
+                         buffContext.beginPath();
+                         buffContext.rect((col-startIndex.x)*32,(row-startIndex.y)*32,//starting pos
+                        32,32);
+                         buffContext.stroke();
                 }
             }
         }
@@ -40,7 +43,21 @@ function createBackroundLayer(backgroundMap,camera){
 
     return function drawBackgroundLayer(context,camera){
         redrawFromCamera(camera);
-        context.drawImage(buffer,- (camera.pos.x%32),- (camera.pos.y%32));
+        context.drawImage(buffer,
+            0,0,
+            buffer.width,buffer.height,
+            - (camera.pos.x%32),- (camera.pos.y%32),
+            buffer.width, buffer.height );
+            
+
+            //test for right
+            /*context.drawImage(buffer,
+                (camera.pos.x%32),(camera.pos.y%32),
+                camera.size.x+ (camera.pos.x%32),camera.size.y+ (camera.pos.y%32),
+                0,0,
+                camera.size.x,camera.size.y);*/
+            //FOR REASON I CANNOPT UNDERSTAND, IT DOESNT WORK!!
+            //mayde find out://
 
     }
 

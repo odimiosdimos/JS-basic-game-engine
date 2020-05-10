@@ -7,17 +7,17 @@ function controllersSetUp(mario,canvas,camera,levelWidth){
 
     keyboarstate.addKeyMaping( 'ArrowRight', (keyState) => {
         if (keyState){
-            mario.vel.x+=100;
+            mario.dir+=1;
         } else {
-            mario.vel.x -=100;
+            mario.dir -=1;
         }
     } )
 
     keyboarstate.addKeyMaping( 'ArrowLeft', (keyState) => {
         if (keyState){
-            mario.vel.x-=100;
+            mario.dir-=1;
         } else {
-            mario.vel.x +=100;
+            mario.dir +=1;
         }
     } )
 
@@ -47,7 +47,7 @@ function controllersSetUp(mario,canvas,camera,levelWidth){
     let lastEvent;
 
     //8elei erwtimatiko pisw gia na ginei auto!! poios kserei gt!
-    ['mousedown','mousemove'].forEach(eventName => {
+   /* ['mousedown','mousemove'].forEach(eventName => {
         canvas.addEventListener( eventName, (event) => {
             //event.preventDefault()
             if (event.buttons === 1 ){
@@ -69,7 +69,7 @@ function controllersSetUp(mario,canvas,camera,levelWidth){
             lastEvent = event;
         } )
 
-    });
+    });*/
 
     canvas.addEventListener('contextmenu', event => {
         event.preventDefault()
